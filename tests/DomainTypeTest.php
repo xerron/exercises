@@ -14,6 +14,31 @@ final class DomainTypeTest extends TestCase
             new DomainType(["es.wiki.org", "codefights.com", "happy.net", "code.info"])
         );
     }
+
+    public function testGetDictionary()
+    {
+        $this->assertEquals(
+            [
+                "org" => "organizacion",
+                "com" => "comercial",
+                "net" => "red",
+                "info" => "informacion"
+            ],
+            (new DomainType())->getDictionary()
+        );
+
+    }
+
+    public function testShowDomainsType()
+    {
+        $this->assertEquals(
+            ["organizacion", "comercial", "red", "informacion"],
+            (new DomainType(["es.wiki.org", "codefights.com", "happy.net", "code.info"]))->show()
+        );
+
+    }
+
+
 }
 
 
