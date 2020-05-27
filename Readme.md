@@ -4,6 +4,11 @@
 
 - PHP 7.3+
 
+## Instalación
+
+    git clone --depth 1 https://github.com/xerron/exercises.git
+    composer install
+
 ## Ejecutar exercicios
 
     php exercise1.php
