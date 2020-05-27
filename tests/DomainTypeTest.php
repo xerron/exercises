@@ -2,7 +2,7 @@
 
 namespace App\Tests;
 
-use App\Domain;
+use App\DomainType;
 use PHPUnit\Framework\TestCase;
 
 final class DomainTypeTest extends TestCase
@@ -10,8 +10,8 @@ final class DomainTypeTest extends TestCase
     public function testCanBeCreated(): void
     {
         $this->assertInstanceOf(
-            Domain::class,
-            new Domain('user.example.com')
+            DomainType::class,
+            new DomainType(["es.wiki.org", "codefights.com", "happy.net", "code.info"])
         );
     }
 }
