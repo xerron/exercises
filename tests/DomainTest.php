@@ -14,6 +14,23 @@ final class DomainTest extends TestCase
             new Domain('user.example.com')
         );
     }
+
+    public function testIsValid()
+    {
+        $this->assertEquals(
+            true,
+            (new Domain('www.u-w-u.com'))->isValid()
+        );
+    }
+
+    public function testGetPublicSuffix()
+    {
+        $this->assertEquals(
+            'com',
+            (new Domain('www.u-w-u.com'))->getPublicSuffix()
+        );
+    }
+
 }
 
 
